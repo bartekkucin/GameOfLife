@@ -40,14 +40,14 @@ public class Board {
 		int cellsCounter = 0;
 		for (int x = 0; x < cells.length; x++) {
 			for (int y = 0; y < cells[x].length; y++) {
-				if (!(cells[x][y].isDead() && cellStateEnum == CellStateEnum.ALIVE)) {
+				if (!(cells[x][y].isDead()) && cellStateEnum == CellStateEnum.ALIVE) {
 					cellsCounter++;
 				} else if (cells[x][y].isDead() && cellStateEnum == CellStateEnum.DEAD) {
 					cellsCounter++;
 				}
 			}
 		}
-		return cellsCounter++;
+		return cellsCounter;
 	}
 
 	public int countDeadCells() {
